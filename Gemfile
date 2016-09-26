@@ -32,6 +32,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'rspec-request_describer'
   gem 'guard-rspec'
+  gem 'html2slim'
+  gem 'erb2slim'
   gem 'rspec-power_assert'
 end
 
