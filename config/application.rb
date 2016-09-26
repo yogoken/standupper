@@ -18,8 +18,21 @@ Bundler.require(*Rails.groups)
 
 module Standupper
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    config.time_zone = 'Tokyo'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ja
+
+    config.generators do |g|
+      g.javascript false
+      g.stylesheets false
+      g.helper false
+      g.template_engine = :slim
+      g.test_framework :rspec,
+        fixture: true,
+        view_specs: false,
+        helper_specs: false,
+        controller_specs: true
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+    end
   end
 end
