@@ -45,6 +45,7 @@ group :development do
 
   # util
   gem 'annotate', github: 'ctran/annotate_models'
+  gem 'guard-rails'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
