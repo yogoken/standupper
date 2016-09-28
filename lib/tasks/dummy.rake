@@ -3,7 +3,7 @@ namespace :dummy do
   task create: :environement do
     100.times do |i|
       Article.create!(
-        file:     File.new("public/sample.jpg")
+        file:     File.new("public/sample.jpg"),
         title:    "#{i}: #{Faker::Name.title}",
         content:  "#{i}: #{Faker::Lorem.paragraph}"
       )
