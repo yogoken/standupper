@@ -6,7 +6,7 @@ class ArticleUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   # include RMagi
-  Include CarrierWave::RMagick
+  include CarrierWave::RMagick
 
   # Choose what kind of storage to use for this uploader:
   case Rails.env
@@ -53,10 +53,6 @@ class ArticleUploader < CarrierWave::Uploader::Base
 
   def filename
     "#{secure_token}.jpg"
-    time = Time.zone.now
-    rand = SecureRandom.hex(2)
-    name = time.strftime('%Y%m%d%H%M%S') + '-' + rand + '.jpg'
-    name.downcase
   end
 
   private
