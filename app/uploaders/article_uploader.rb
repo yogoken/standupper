@@ -52,9 +52,16 @@ class ArticleUploader < CarrierWave::Uploader::Base
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
 
   def filename
+    "#{secure_token}.jpg"
     time = Time.zone.now
     rand = SecureRandom.hex(2)
     name = time.strftime('%Y%m%d%H%M%S') + '-' + rand + '.jpg'
     name.downcase
   end
+
+  private
+    def secure_token
+      var = :"@#{mounted_as}_secure_token"
+      model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
+    end
 end
