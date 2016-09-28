@@ -52,4 +52,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'rails-erd'
+# uploader
 gem 'carrierwave'
+gem 'rmagick'
