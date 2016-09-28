@@ -32,8 +32,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'rspec-request_describer'
   gem 'guard-rspec'
-  gem 'html2slim'
-  gem 'erb2slim'
   gem 'rspec-power_assert'
 end
 
@@ -51,3 +49,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'acts-as-taggable-on', '~> 4.0'
+gem "rails-erd"

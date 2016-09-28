@@ -3,8 +3,16 @@ html
   head
     title
       | Standupper
+    meta charset="utf-8" content="text/html"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    meta content="yogoken" name="author"
     = csrf_meta_tags
+    = render 'layouts/stylesheets'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body
-    = yield
+  body.header-fixed.header-fixed-space-v2
+    .wrapper
+      = render 'layouts/header'
+      = yield
+      = render 'layouts/footer'
+    = render 'layouts/javascripts'
