@@ -15,6 +15,17 @@ script src="/news/assets/plugins/login-signup-modal-window/js/main.js"
 script src="/news/assets/js/custom.js"
 script src="/news/assets/js/app.js"
 script src="/news/assets/js/plugins/fancy-box.js"
-script src="/news/assets/js/plugi\t\tns/owl-carousel.js"
+script src="/news/assets/js/plugins/owl-carousel.js"
 script src="/news/assets/js/plugins/master-slider-showcase1.js"
 script src="/news/assets/js/plugins/style-switcher.js"
+
+javascript:
+  jQuery(document).ready(function() {
+    App.init();
+    App.initCounter();
+    FancyBox.initFancybox();
+    OwlCarousel.initOwlCarousel();
+    OwlCarousel.initOwlCarousel2();
+    StyleSwitcher.initStyleSwitcher();
+    MasterSliderShowcase1.initMasterSliderShowcase1();
+  });

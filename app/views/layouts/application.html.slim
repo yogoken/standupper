@@ -10,8 +10,8 @@ html
     = render 'layouts/stylesheets'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body.stretched.sticky-responsive-menu
-    #wrapper.clearfix
+  body.header-fixed.header-fixed-space-v2
+    .wrapper
       = render 'layouts/header'
       = yield
     = render 'layouts/javascripts'
