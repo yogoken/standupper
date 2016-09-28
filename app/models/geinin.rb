@@ -1,0 +1,2 @@
+class Geinin < ApplicationRecord
+end
