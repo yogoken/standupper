@@ -3,15 +3,15 @@ html
   head
     title
       | Standupper
-    meta charset="utf-8"
+    meta charset="utf-8" content="text/html"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
-    meta content="" name="description"
-    meta content="" name="author"
+    meta content="yogoken" name="author"
     = csrf_meta_tags
+    = render 'layouts/stylesheets'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body.stretched.sticky-responsive-menu
     #wrapper.clearfix
       = render 'layouts/header'
       = yield
-      = render 'layouts/javascripts'
+    = render 'layouts/javascripts'
