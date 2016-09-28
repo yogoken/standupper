@@ -3,6 +3,10 @@ html
   head
     title
       | Standupper
+    meta charset="utf-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    meta content="" name="description"
+    meta content="" name="author"
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
@@ -10,3 +14,4 @@ html
     #wrapper.clearfix
       = render 'layouts/header'
       = yield
+      = render 'layouts/javascripts'
