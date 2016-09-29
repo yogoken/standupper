@@ -33,6 +33,7 @@ group :development, :test do
   gem 'rspec-request_describer'
   gem 'guard-rspec'
   gem 'rspec-power_assert'
+  gem 'faker'
 end
 
 group :development do
@@ -50,4 +51,7 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'acts-as-taggable-on', '~> 4.0'
-gem "rails-erd"
+gem 'rails-erd'
+# uploader
+gem 'carrierwave'
+gem 'rmagick'
