@@ -57,3 +57,4 @@ config/environments/*.local.yml
 *.jpg
 *.jpeg
 *.gif
+/public/
