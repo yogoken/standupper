@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002094139) do
+ActiveRecord::Schema.define(version: 20161002102604) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",                                      null: false
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20161002094139) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "uuid"
+    t.index ["uuid"], name: "index_users_on_uuid", unique: true, using: :btree
   end
 
   add_foreign_key "articles", "geinins"
