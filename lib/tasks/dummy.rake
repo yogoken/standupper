@@ -4,7 +4,7 @@ namespace :dummy do
     logger.debug "creating dummy geinins..."
     1.upto(5) do |i|
       Geinin.create!(
-        name: "ジャンル:#{i}"
+        name: "geinin:#{i}"
       )
     end
     logger.debug "creating dummy articles..."
