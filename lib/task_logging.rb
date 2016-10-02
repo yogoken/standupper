@@ -1,5 +1,5 @@
 module TaskLogging
-  def task(*args, &blockl)
+  def task(*args, &block)
     Rake::Task.define_task(*args) do |task|
       if block_given?
         Rails.logger.debug "[#{task.name}] started"
