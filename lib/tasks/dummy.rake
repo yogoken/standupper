@@ -1,8 +1,14 @@
 namespace :dummy do
   desc 'Create dummy data for development environment'
   task create: %i(common) do
-    logger.debug "creating dummy article..."
-    100.times do |i|
+    logger.debug "creating dummy geinins..."
+    1.upto(5) do |i|
+      Geinin.create!(
+        name: "ジャンル:#{i}"
+      )
+    end
+    logger.debug "creating dummy articles..."
+    1.upto(100) do |i|
       Article.create!(
         file:  File.new("public/sample.jpg"),
         title: "#{i}: #{Faker::Name.title}",
