@@ -8,11 +8,13 @@ namespace :dummy do
       )
     end
     logger.debug "creating dummy articles..."
+    geinin = Geinin.all
     1.upto(100) do |i|
       Article.create!(
-        file:  File.new("public/sample.jpg"),
-        title: "#{i}: #{Faker::Name.title}",
-        body:  "#{i}: #{Faker::Lorem.paragraph}"
+        file:   File.new("public/sample.jpg"),
+        title:  "#{i}: #{Faker::Name.title}",
+        body:   "#{i}: #{Faker::Lorem.paragraph}",
+        geinin: geinin.sample
       )
     end
     logger.info "created dummy articles!"
