@@ -16,4 +16,6 @@
 class Geinin < ApplicationRecord
   # associations
   has_many :articles
+
+  scope :bigger, -> { order(articles_count: :desc) }
 end
