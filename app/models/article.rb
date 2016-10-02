@@ -21,7 +21,7 @@
 
 class Article < ApplicationRecord
   # associations
-  belongs_to :geinin
+  belongs_to :geinin, counter_cache: true
   # tags
   acts_as_taggable
 
