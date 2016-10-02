@@ -6,7 +6,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
   # include RMagick
-  include CarrerWave::RMagick
+  include CarrierWave::RMagick
 
   # Choose what kind of storage to use for this uploader:
   case Rails.env
