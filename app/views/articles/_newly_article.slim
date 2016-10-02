@@ -1,0 +1,8 @@
+.ms-slide.blog-slider
+  = link_to image_tag(newly_article.file, alt: 'lorem ipsum')
+  span.blog-slider-badge = newly_article.title
+  .ms-info
+  .blog-slider-title
+    span.blog-slider-posted Mar 6, 2015
+    h2
+      = link_to newly_article.body
