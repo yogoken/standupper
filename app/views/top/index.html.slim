@@ -1,37 +1,6 @@
 .blog-ms-v1.content-sm.bg-color-darker.margin-bottom-60
   #masterslider.master-slider.ms-skin-default
-    .ms-slide.blog-slider
-      img alt=("lorem ipsum dolor sit") data-src="facebook3.jpg" src="news/assets/plugins/master-slider/masterslider/style/blank.gif" /
-      span.blog-slider-badge World
-      .ms-info
-      .blog-slider-title
-        span.blog-slider-posted Mar 6, 2015
-        h2
-          a href="#"  mark zuckerberg is not the founder of facebook?
-    .ms-slide.blog-slider
-      img alt=("lorem ipsum dolor sit") data-src="facebook2.jpg" src="news/assets/plugins/master-slider/masterslider/style/blank.gif" /
-      span.blog-slider-badge Facebook
-      .ms-info
-      .blog-slider-title
-        span.blog-slider-posted Mar 6, 2015
-        h2
-          a href="#"  Learning as you're earning: The alternative to a degree
-    .ms-slide.blog-slider
-      img alt=("lorem ipsum dolor sit") data-src="facebook3.jpg" src="news/assets/plugins/master-slider/masterslider/style/blank.gif" /
-      span.blog-slider-badge Mark
-      .ms-info
-      .blog-slider-title
-        span.blog-slider-posted Mar 6, 2015
-        h2
-          a href="#"  Brady handed his place in history
-    .ms-slide.blog-slider
-      img alt=("lorem ipsum dolor sit") data-src="facebook.jpg" src="news/assets/plugins/master-slider/masterslider/style/blank.gif" /
-      span.blog-slider-badge Amazing
-      .ms-info
-      .blog-slider-title
-        span.blog-slider-posted Mar 6, 2015
-        h2
-          a href="#"  Nadège Vanhee-Cybulski makes Hermès debut
+    = render partial: 'articles/newly_article', collection: @newly_articles
 .container.margin-bottom-40
   .row
     .col-md-9
@@ -39,7 +8,7 @@
         h2.title-v4 Recent Posts
         .row.margin-bottom-50
           = render partial: "articles/article", collection: @articles
-          / = paginate @articles
+          = paginate @articles
       .blog-cars-heading
         h2 Breaking News
         .owl-navigation
@@ -69,7 +38,7 @@
         .item
           .row
             .col-sm-5.sm-margin-bottom-20
-              img.img-responsive alt="" src="news/assets/img/blog/img39.jpg" /
+              img.img-responsive alt="" src="sample.jpg" /
             .col-sm-7
               .blog-grid
                 h3
@@ -86,7 +55,7 @@
         .item
           .row
             .col-sm-5.sm-margin-bottom-20
-              img.img-responsive alt="" src="news/assets/img/blog/img40.jpg" /
+              img.img-responsive alt="" src="mark.jpg" /
             .col-sm-7
               .blog-grid
                 h3
