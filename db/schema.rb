@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002081106) do
+ActiveRecord::Schema.define(version: 20161002090633) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",                                      null: false
@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20161002081106) do
   end
 
   create_table "geinins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.string   "name",       default: "unknown geinin", null: false
     t.index ["name"], name: "index_geinins_on_name", unique: true, using: :btree
   end
 

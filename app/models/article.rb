@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  # associations
+  belongs_to :geinin
   # tags
   acts_as_taggable
 
