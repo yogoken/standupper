@@ -4,8 +4,6 @@
     h3
       = link_to article.title, '/'
     span
-      | >
       - article.tags.each.with_index(1) do |tag, num|
+        | △
         = link_to tag.name, '/'
-        - unless num == gif.tags.size
-          | ,
