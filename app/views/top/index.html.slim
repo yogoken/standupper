@@ -73,42 +73,15 @@
       .margin-bottom-50
         h2.title-v4 Twitter Posts
         ul.twitter-posts
-          li
-            img.rounded-x alt="" src="mark.jpg" /
-            .twitter-posts-in
-              strong Dr.Cafee
-              span
-                a href="#"  @DrCafee
-              span 4h
-              p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              a.link href="#"  http://bit.ly/1c0UN3Y
-          li
-            img.rounded-x alt="" src="mark.jpg" /
-            .twitter-posts-in
-              strong Jessi
-              span
-                a href="#"  @Jessi
-              span 5m
-              p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              a.link href="#"  http://bit.ly/1c0UN3Y
-          li
-            img.rounded-x alt="" src="mark.jpg" /
-            .twitter-posts-in
-              strong PhotoStudio
-              span
-                a href="#"  @PS
-              span 7h
-              p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              a.link href="#"  http://bit.ly/1c0UN3Y
-          li
-            img.rounded-x alt="" src="mark.jpg" /
-            .twitter-posts-in
-              strong Wrapbootstrap
-              span
-                a href="#"  @Wrapbootstrap
-              span 25m
-              p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              a.link href="#"  http://bit.ly/1c0UN3Y
+          - @geinins.each do |geinin|
+            li
+              img.rounded-x alt="" src="mark.jpg" /
+              .twitter-posts-in
+                strong = geinin.name
+                span
+                  = link_to "articles num #{ geinin.articles_count }"
+                p= geinin.articles.first.title
+                = geinin.articles.first.body
       .margin-bottom-50
         h2.title-v4 Tags
         ul.list-inline.tags-v3
