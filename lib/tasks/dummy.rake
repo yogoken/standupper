@@ -19,9 +19,13 @@ namespace :dummy do
   task create: %i(common) do
     logger.debug "creating dummy geinins..."
     1.upto(5) do |i|
-      Geinin.create!(
-        name: "geinin:#{i}"
-      )
+      begin
+        Geinin.create!(
+          name: "geinin_#{i}"
+        )
+      rescue ActiveRecord::RecordInvalid => e
+        puts "#{e}: skip"
+      end
     end
     logger.debug "creating dummy articles..."
     geinin = Geinin.all

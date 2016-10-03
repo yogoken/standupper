@@ -17,5 +17,8 @@ class Geinin < ApplicationRecord
   # associations
   has_many :articles
 
+  # validations
+  validates :name, uniqueness: true
+
   scope :bigger, -> { order(articles_count: :desc) }
 end
