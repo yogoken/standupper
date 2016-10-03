@@ -8,6 +8,13 @@ namespace :dummy do
     'google',
     'twitter'
   ]
+  bodies = [
+    'a is great',
+    'b is perfect',
+    'c is not good',
+    'd is absolutely fantastic',
+    'e is soso'
+  ]
   desc 'Create dummy data for development environment'
   task create: %i(common) do
     logger.debug "creating dummy geinins..."
@@ -22,7 +29,7 @@ namespace :dummy do
       Article.create!(
         file:   File.new("public/sample.jpg"),
         title:  "#{i}: #{titles.sample}",
-        body:   "#{i}: #{Faker::Lorem.paragraph}",
+        body:   "#{i}: #{bodies.sample}",
         geinin: geinin.sample
       )
     end

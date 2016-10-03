@@ -79,10 +79,9 @@
               .twitter-posts-in
                 strong = geinin.name
                 span
-                  a href="#"  @DrCafee
-                span 4h
-                p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                a.link href="#"  http://bit.ly/1c0UN3Y
+                  = link_to "articles num #{ geinin.articles_count }"
+                p= geinin.articles.first.title
+                = geinin.articles.first.body
       .margin-bottom-50
         h2.title-v4 Tags
         ul.list-inline.tags-v3
