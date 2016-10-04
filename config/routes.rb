@@ -6,4 +6,5 @@
 
 Rails.application.routes.draw do
   root to: 'top#index'
+  resources :articles, only: :show
 end
