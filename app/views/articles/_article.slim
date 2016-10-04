@@ -1,5 +1,8 @@
 .col-sm-3.col-xs-6
   .blog-thumb-v4
-    = link_to image_tag(article.file, class: 'img-responsive margin-bottom-10' )
+    = link_to image_tag article.file, class: 'img-responsive margin-bottom-10'
     h3
-      = link_to article.body
+      = link_to article.title, '/'
+    .rounded-3x.list-inline
+      - article.tags.each.with_index(1) do |tag, num|
+        li= link_to tag.name, '/'

@@ -8,74 +8,14 @@
         h2.title-v4 Recent Posts
         .row.margin-bottom-50
           = render partial: "articles/article", collection: @articles
-          = paginate @articles
-      .blog-cars-heading
-        h2 Breaking News
-        .owl-navigation
-          .customNavigation
-            a.owl-btn.prev-v3
-              i.fa.fa-angle-left
-            a.owl-btn.next-v3
-              i.fa.fa-angle-right
-      .blog-carousel.margin-bottom-50
-        .item
-          .row
-            .col-sm-5.sm-margin-bottom-20
-              img.img-responsive alt="" src="facebook.jpg" /
-            .col-sm-7
-              .blog-grid
-                h3
-                  a href="blog_single.html"  New winter fashion style
-                ul.blog-grid-info
-                  li Evan Bartlett
-                  li Mar 6, 2015
-                  li
-                    a href="#"
-                      i.fa.fa-comments
-                      | 0
-                p Pellentesque turpis lacus, tempus et fermentum vitae, dignissim ornare purus. Nulla facilisi. Suspendisse potenti. Aenean vitae lacus lobortis lacus finibus volutpat eu nec sem. Sed ultrices velit vitae tortor posuere ultrices. Aliquam laoreet lorem et vulputate porta.
-                a.r-more href="blog_single.html"  Read More
-        .item
-          .row
-            .col-sm-5.sm-margin-bottom-20
-              img.img-responsive alt="" src="sample.jpg" /
-            .col-sm-7
-              .blog-grid
-                h3
-                  a href="blog_single.html"  New 5 star hotel in Sydney
-                ul.blog-grid-info
-                  li Evan Bartlett
-                  li Mar 6, 2015
-                  li
-                    a href="#"
-                      i.fa.fa-comments
-                      | 0
-                p Pellentesque turpis lacus, tempus et fermentum vitae, dignissim ornare purus. Nulla facilisi. Suspendisse potenti. Aenean vitae lacus lobortis lacus finibus volutpat eu nec sem. Sed ultrices velit vitae tortor posuere ultrices. Aliquam laoreet lorem et vulputate porta.
-                a.r-more href="blog_single.html"  Read More
-        .item
-          .row
-            .col-sm-5.sm-margin-bottom-20
-              img.img-responsive alt="" src="mark.jpg" /
-            .col-sm-7
-              .blog-grid
-                h3
-                  a href="blog_single.html"  Prepare yourself for summer
-                ul.blog-grid-info
-                  li Evan Bartlett
-                  li Mar 6, 2015
-                  li
-                    a href="#"
-                      i.fa.fa-comments
-                      | 0
-                p Pellentesque turpis lacus, tempus et fermentum vitae, dignissim ornare purus. Nulla facilisi. Suspendisse potenti. Aenean vitae lacus lobortis lacus finibus volutpat eu nec sem. Sed ultrices velit vitae tortor posuere ultrices. Aliquam laoreet lorem et vulputate porta.
-                a.r-more href="blog_single.html"  Read More
+        = paginate @articles
     .col-md-3
       .margin-bottom-50
         h2.title-v4 Twitter Posts
         ul.twitter-posts
           - @geinins.each do |geinin|
             li
-              img.rounded-x alt="" src="mark.jpg" /
+              = link_to image_tag(geinin.articles.first.file)
               .twitter-posts-in
                 strong = geinin.name
                 span
@@ -84,14 +24,7 @@
                 = geinin.articles.first.body
       .margin-bottom-50
         h2.title-v4 Tags
-        ul.list-inline.tags-v3
-          li
-            a.rounded-3x href=""  Facebook
-          li
-            a.rounded-3x href=""  Mark Zuckerberg
-          li
-            a.rounded-3x href=""  Harvard
-          li
-            a.rounded-3x href=""  hogehoge
-          li
-            a.rounded-3x href=""  Computer Science
+        .list-inline.tags-v3
+        - @articles.each do |article|
+          - article.tags.each do |tag|
+            li= link_to tag.name

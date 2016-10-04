@@ -15,6 +15,13 @@ namespace :dummy do
     'd is absolutely fantastic',
     'e is soso'
   ]
+  tags = [
+    'IoT',
+    'ruby on rails',
+    'programming',
+    'engineer',
+    'facebook'
+  ]
   desc 'Create dummy data for development environment'
   task create: %i(common) do
     logger.debug "creating dummy geinins..."
@@ -31,10 +38,11 @@ namespace :dummy do
     geinin = Geinin.all
     1.upto(100) do |i|
       Article.create!(
-        file:   File.new("public/sample.jpg"),
-        title:  "#{i}: #{titles.sample}",
-        body:   "#{i}: #{bodies.sample}",
-        geinin: geinin.sample
+        file:     File.new("public/facebook2.jpg"),
+        title:    "#{i}: #{titles.sample}",
+        body:     "#{i}: #{bodies.sample}",
+        geinin:   geinin.sample,
+        tag_list: tags.sample(rand(tags.length))
       )
     end
     logger.info "created dummy articles!"
