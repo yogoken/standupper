@@ -38,7 +38,7 @@ namespace :dummy do
     geinin = Geinin.all
     1.upto(100) do |i|
       Article.create!(
-        file:     File.new("public/sample.jpg"),
+        file:     File.new("public/facebook2.jpg"),
         title:    "#{i}: #{titles.sample}",
         body:     "#{i}: #{bodies.sample}",
         geinin:   geinin.sample,
