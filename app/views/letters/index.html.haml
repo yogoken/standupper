@@ -1,0 +1,7 @@
+.container
+  = render partial: "layouts/sidebar"
+  .container__letter-container
+    .container__letter-container__letter-block
+      = render @letters
+= render partial: "letters/new_modal"
+
