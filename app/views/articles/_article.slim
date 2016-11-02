@@ -1,6 +1,9 @@
 .col-sm-3.col-xs-6
   .blog-thumb-v4
     = link_to image_tag article.file, class: 'img-responsive margin-bottom-10'
+    .portfolio-overlay
+      = link_to article_path(article), class: 'right-icon' do
+        i.icon-line-ellipsis
     h3
       = link_to article.title, '/'
     .rounded-3x.list-inline
