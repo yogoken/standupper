@@ -45,6 +45,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
   gem 'xray-rails'
+  gem 'haml-rails'
+  gem 'erb2haml'
+  gem 'mechanize'
 
   # util
   gem 'annotate', github: 'ctran/annotate_models'
