@@ -62,3 +62,4 @@ gem 'carrierwave'
 gem 'rmagick'
 # pagination
 gem 'kaminari'
+gem 'jquery-turbolinks'

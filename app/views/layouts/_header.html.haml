@@ -1,0 +1,9 @@
+.header
+  .header__title
+    %h1
+      = link_to 'What does the fox say', root_path, class: 'header__title__font'
+  .header__nav
+    = image_tag "/news/assets/img/themes/standupper-red-big.png", class: "header__nav__user", id: "books"
+    = image_tag "yogoken.png", class: "header__nav__user", id: 'letter-new'
+    = image_tag "/news/assets/img/icons/pen.png", id: "letter-new", class: "header__nav__new-letter"
+    = render partial: 'letters/new_modal'
